@@ -26,5 +26,18 @@
 // console.log(calc2.multiply(2, 5))
 
 // we can use object destructuring using es6 for easier solution
-const { add, multiply, divide, sub } = require("./test-module-2")
-console.log(multiply(2, 5))
+// const { add, multiply, divide, sub } = require("./test-module-2")
+// console.log(multiply(2, 5))
+
+// caching
+// this is how you call the function right away if it has no name without saving it to a variable
+require("./test-module-3")()
+require("./test-module-3")()
+require("./test-module-3")()
+// the module will be loaded once // and it will be run once because it loads one time
+// the result of the function will be stored in cache and will be used again form the cache
+// output:
+// hello from module
+// log from function :)
+// log from function :)
+// log from function :)
